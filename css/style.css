@@ -1,0 +1,264 @@
+/*Add padding and margin to space out the page.
+Make the font larger too.*/
+body{
+	margin:1%;
+	padding:1%;
+	font-size:150%;
+	background: #00274c;
+	color: #ffffff;
+}
+
+
+/*Make the h1 heading bigger with a bold font*/
+h1{
+	display: grid;
+	font-size: 2em; 
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 15px;
+	justify-content: center;
+}
+
+/*Style the images*/
+img{
+	display: block;
+    max-width: 50%;
+	height:auto;
+	margin-right:auto;
+	margin-left:auto;
+}
+.project_images img{
+	min-width: 33%;
+	border: 5px solid #ffffff;
+	border-radius: 25px;
+}
+/*Make the h2 heading match h1*/
+h2{
+	display: grid;
+	font-size: 1.5em; 
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 15px;
+	justify-content: center;
+}
+
+/*Change the styling for all of the list 
+items in the nav section*/
+
+.about_text{
+	display:block;
+	padding: 10px 10px 10px 10px;
+	font-family: 'Courier New', Courier, monospace;
+	border: 5px solid #ffffff;
+	border-radius: 15px;
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bolder;
+}
+.nav_links{
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: space-around;
+	background-color: #ffcb05;
+	padding:10px;
+	border:1px solid black;
+}
+
+nav li a:hover, nav li a:focus{
+	color: blue;
+	font-size: larger;
+	border:2px dashed black;
+}
+.nav_links .active_page{
+	font-size: xx-large;
+	color: blue;
+	border-bottom: 2px solid black;
+}
+
+.movielist{
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+	align-content: center;
+	grid-row-gap: 10px;
+	font-family: 'Courier New', Courier, monospace;
+	/* Play with: */
+	/* justify-content:; */
+	/* justify-items:;  */
+	/* align-items:; */
+	/* align-content:; */
+}
+
+.movielist img:hover, .movielist img:focus{
+	animation-name: grow_animation;
+	animation-duration: 3s;
+	animation-fill-mode: both;
+}
+
+.skip a{
+	background: white;
+	border:1px solid black;
+	left: 0;
+	padding: 6px;
+	-webkit-transition: top 1s ease-out;
+	transition: top 1s ease-out;
+	z-index: 1;
+	position: absolute;
+	top: -50px;
+}
+
+.skip a:focus{
+	position: relative;
+	top: 0px;
+	left: 0;
+}
+
+.focus{
+	border:3px dashed black;
+}
+
+.movielist img, .movielist p {
+	border: 5px solid #ffffff;
+	border-radius: 25px;
+	text-align: center;
+
+}
+/*Added this so the links stay the same color*/
+a:visited{color:purple}
+
+form {
+  border: 3px solid #ffcb05;
+}
+
+legend{ 
+  font-size: 125%;
+  font-style:italic;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+label{
+  display: inline-block;
+  width:15%;
+  font-family: 'Courier New', Courier, monospace;
+}
+input {
+  width: 75%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+}
+span{
+  margin-left:auto;
+  font-family: italic;
+  font-weight: bold;
+}
+
+textarea{
+  width: 75%;
+  height: 35vh;
+  margin: 8px 0;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  background-color: #ffcb05;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0 10px 12.5%;
+  border: none;
+  cursor: pointer;
+  width: 75%;
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+
+@keyframes grow_animation {
+    0%  {max-width: 50%;}
+	0%  {border-radius: 25px;}
+    100%  {max-width: 55%;}
+	100%  {border-radius: 0px;}
+
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+	html{
+		scroll-behavior: auto;
+	}
+  
+	.skip a{
+	  -webkit-transition: initial; 
+	  transition: initial; 
+	  animation-name: grow_animation;
+	  animation-duration: 0s;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	form{
+	  width: 80%;
+	  margin: 0 auto;
+	}
+  
+	input{
+	  width:80%;
+	}
+  
+	textarea{
+	  width:80%;
+	  height: 25vh;
+   }
+   
+   div + label{
+	  line-height: 25vh;
+	  vertical-align:top;
+   }
+
+   img{
+	display: block;
+    max-width: 80%;
+	height:auto;
+	margin-right:auto;
+	margin-left:auto;
+	}
+
+   .nav_links{
+	display:flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #ffcb05;
+	padding:10px;
+	border:1px solid black;
+	}
+
+	.movielist{
+		display: grid;
+		grid-template-columns: 80%;
+		grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+		align-content: center;
+		justify-content: center;
+		grid-row-gap: 10px;
+		font-family: 'Courier New', Courier, monospace;
+		/* Play with: */
+		/* justify-content:; */
+		/* justify-items:;  */
+		/* align-items:; */
+		/* align-content:; */
+	}
+
+	.project_images img{
+		min-width: 80%;
+		border: 5px solid #ffffff;
+		border-radius: 25px;
+	}
+  }

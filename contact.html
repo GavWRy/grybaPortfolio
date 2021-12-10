@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--  TIP 
+	You will find any errors from the head section using
+	the console. -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="imgs/clapperboard.png">
+	<link rel="stylesheet" href="css/html5reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Contact Me</title>
+</head>
+<body>
+	<div class="skip"><a href="#main">Skip to Main Content</a></div>
+
+	<header id = "main">
+		<nav>
+			<ul class = "nav_links">
+				<li class = "nav_item"><a href = "index.html">About Me</a></li>
+				<li class = "nav_item"><a href = "personal.html">Misc</a></li>
+				<li class = "nav_item"><a href = "projects.html">Projects</a></li>
+				<li class = "nav_item"><a class = "active_page" href = "contact.html">Contact Me</a></li>
+			</ul>
+		</nav>
+		<h1>Contact Me</h1>
+		<h2>Have a question? Interested in films? Bored? Leave a response.</h2>
+	</header>
+	
+	<main>
+		<form>
+			<fieldset>
+			  <legend>Contact Info Goes Below</legend>
+		  
+			  <label for="name_id">CHARACTER NAME:</label>
+			  <input type="text" placeholder="Enter Your Name. Ex. GUITAR PLAYER, SGT. NICHOLAS ANGEL, DELMAR O'DONNELL" id = "name_id" name="name" required>
+			  <label for="email_id">EMAIL:</label>
+			  <input type="email" placeholder="Enter Your Email. Note: Required for a response email. Ex. ladiesman217@hotmail.com" id = "email_id" name="email" required>
+			  <label for="phone_id">PHONE NUMBER:</label>
+			  <input type="tel" name="phone" placeholder="Who am I gonna call?" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+			  <div><span>Format: 1-800-555-2368 (Ghostbusters)</span></div>
+			  <label for="msg">LEAVE A MESSAGE:</label>
+			  <textarea placeholder="I don't know who you are. I don't know what you want. If you are looking for ransom, I can tell you I don't have money. But what I do have are a very particular set of skills, skills I have acquired over a very long career. Skills that make me a nightmare for people like you. If you let my daughter go now, that'll be the end of it. I will not look for you, I will not pursue you. But if you don't, I will look for you, I will find you, and I will kill you." id = "msg" name="mesg" required></textarea><br>
+			  <input type="submit" value = "Contact Me">
+			  
+			</fieldset>
+		   </form>
+	</main>
+
+
+	<footer>
+		<p>Gavin Ryba &copy; 2021</p>
+	</footer>
+</body>
+</html>
